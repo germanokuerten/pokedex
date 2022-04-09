@@ -27,10 +27,38 @@ app.use(methodOverride("_method"))
 // Routes
 //////////////
 
-app.get("/", (req, res) => {
-    res.send("Test!")
+
+// Index route
+
+app.get("/pokemon", (req, res) => {
+    res.render("index.ejs", {data: pokemon})
 })
 
+
+// Show route
+
+app.get("/pokemon/:id", (req, res) => {
+    res.render("show.ejs", {index: pokemon[req.params.id]})
+})
+
+
+// New route
+
+app.get("/pokemon/new", (req, res) => {
+    res.render("new.ejs")
+})
+
+
+// Edit route
+
+app.get("/pokemon/:id/edit", (req, res) => {
+    res.render("edit.ejs")
+})
+
+
+//////////////////
+// Listen Route
+//////////////////
 
 app.listen(PORT, () => {
     console.log("PORT is listening!")
