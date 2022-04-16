@@ -25,7 +25,7 @@ const methodOverride = require("method-override")
 //////////////
 
 // Body Parser
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
 // Morgan Dep
@@ -82,14 +82,16 @@ app.get("/pokemon/:id/edit", (req, res) => {
 
 app.put("/pokemon/:id", (req, res) => {
     // convert readyToEat to a Boolean
-    if (req.body.readyToEat === "on"){
-      req.body.readyToEat = true
-    } else {
-      req.body.readyToEat = false
-    }
-  
-    pokemon[req.params.id] = req.body
-  
+    // if (req.body.readyToEat === "on"){
+    //   req.body.readyToEat = true
+    // } else {
+    //   req.body.readyToEat = false
+    // }
+    const pokemonNew = {...pokemon[req.params.id]}
+    Object.assign(pokemonNew, req.body)
+    
+    pokemon[req.params.id] = pokemonNew
+    
     res.redirect("/pokemon")
   })
 

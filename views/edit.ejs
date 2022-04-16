@@ -35,8 +35,8 @@
 
     <!-- Pokemon type -->
 
-    <input type="text" name="name" value="<%= poke.type[0] %>" /> <br>
-    <input type="text" name="name" value="<%= poke.type[1] %>" /> <br>
+    <input type="text" name="type[]" value="<%= poke.type[0] %>" /> <br>
+    <input type="text" name="type[]" value="<%= poke.type[1] %>" /> <br>
 
     <!-- Pokemon Id -->
  
@@ -45,27 +45,27 @@
      <!-- Pokemon Image -->
 
      <img src="<%= poke.img %> " alt=""> <br><br>
-     <input type="text" name="name" value="<%= poke.img %>"/> <br>
+     <input type="text" name="img" value="<%= poke.img %>"/> <br>
 
     <!-- Main Stats -->
 
     <h4>Stats: </h4> 
 
-    <p>hp:&nbsp<input type="text" name="name" value="<%= poke.stats.hp %>"/></p> 
+    <p>hp:&nbsp<input type="text" name="stats[hp]" value="<%= poke.stats.hp %>"/></p> 
 
-    <p>attack:&nbsp<input type="text" name="name" value="<%= poke.stats.attack %>"/></p>
+    <p>attack:&nbsp<input type="text" name="stats[attack]" value="<%= poke.stats.attack %>"/></p>
     
-    <p>defense:&nbsp<input type="text" name="name" value="<%= poke.stats.defense %>"/></p>
+    <p>defense:&nbsp<input type="text" name="stats[defense]" value="<%= poke.stats.defense %>"/></p>
 
-    <p>spattack:&nbsp<input type="text" name="name" value="<%= poke.stats.spattack %>"/></p>
+    <p>spattack:&nbsp<input type="text" name="stats[spattack]" value="<%= poke.stats.spattack %>"/></p>
 
-    <p>spdefense:&nbsp<input type="text" name="name" value="<%= poke.stats.spdefense %>"/></p>
+    <p>spdefense:&nbsp<input type="text" name="stats[spdefense]" value="<%= poke.stats.spdefense %>"/></p>
   
-    <p>speed:&nbsp<input type="text" name="name" value="<%= poke.stats.speed %>"/></p>
+    <p>speed:&nbsp<input type="text" name="stats[speed]" value="<%= poke.stats.speed %>"/></p>
     
     
 
-       <p>Ready to update? <input type="checkbox" name="readyToEat" <%= poke.readyToEat ? "checked" : null %>/></p> 
+       
 
                 <!-- turnary operator ? : (if statement alternative)-->
 
