@@ -62,10 +62,22 @@ app.get("/pokemon/new", (req, res) => {
 
 // Delete - Note: Look up fruits app
 
+app.delete("/pokemon/:id", (req, res) => {
+    // grab the index from params
+    const index = req.params.id
+    // splice the fruit from fruits
+    pokemon.splice(index, 1)
+    // redirect back to main page
+    res.redirect('/pokemon')
+  })
+
 // Edit / Update route
 
 app.get("/pokemon/:id/edit", (req, res) => {
-    res.render("edit.ejs")
+    res.render("edit.ejs", {
+        poke: pokemon[req.params.id],
+        index: req.params.id
+    })
 })
 
 // Show route

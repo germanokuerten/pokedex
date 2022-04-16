@@ -13,9 +13,15 @@
         body {
             text-align: center;
         }
+        img {
+            max-width: 250px;
+        }
+        a {
+            font-size: 30px;
+        }
     </style>
     
-    <h1><a href="/pokemon/">Pokemon Index</a></h1> <br>
+    <a href="/pokemon/">Back to Pokedex</a> <br>
 
     <!-- Pokemon Name -->
 
@@ -28,22 +34,24 @@
 
     <!-- Pokemon Id -->
  
-    <p> #<%= poke.id %> </p>
+    <p> #<%= poke.id %> </p> <br>
 
      <!-- Pokemon Image -->
 
-     <img src="<%= poke.img %> " alt="">
+     <img src="<%= poke.img %> " alt=""> <br><br>
 
     <!-- Main Stats -->
 
-    <p>Stats: </p>
+    <h4>Stats: </h4> 
 
-    <p> hp:<%= poke.stats.hp %> </p>
-    <p> attack:<%= poke.stats.attack %> </p>
-    <p> defense:<%= poke.stats.defense %> </p>
-    <p> spattack:<%= poke.stats.spattack %> </p>
-    <p> spdefense:<%= poke.stats.spdefense %> </p>
-    <p> speed:<%= poke.stats.speed %> </p>
+    <p>hp:&nbsp<%= poke.stats.hp %> </p>
+    <p>attack:&nbsp<%= poke.stats.attack %> </p>
+    <p>defense:&nbsp<%= poke.stats.defense %> </p>
+    <p>spattack:&nbsp<%= poke.stats.spattack %> </p>
+    <p>spdefense:&nbsp<%= poke.stats.spdefense %> </p>
+    <p>speed:&nbsp<%= poke.stats.speed %> </p>
 
+    <!-- Edit button (Delete Button inside of Edit page) -->      
+   
 </body>
 </html>

@@ -41,11 +41,17 @@
         
         <h2> <%= allPoke[i].name %> </h2>
         
-       <a href="/pokemon/<%=i%> "><img src="<%= allPoke[i].img %>" alt=""></a>  
+        <a href="/pokemon/<%= i %> "><img src="<%= allPoke[i].img %>" alt=""></a> <br>
+
+
+        <div>
+        <form action="/pokemon/<%=i%>?_method=DELETE" method="post">
+            <input type="submit" value="Delete">
+        </form>
         
-        <p>Type:</p>
-            <p><%= allPoke[i].type[0] %> </p>
-            <p><%= allPoke[i].type[1] %> </p> <br>
+        <a href="/pokemon/<%= i %>/edit"><button>Edit</button></a>
+        </div>
+            
         
     <% } %>
     
