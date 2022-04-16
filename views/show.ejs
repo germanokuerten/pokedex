@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+    
+    <h1><a href="/pokemon/">Pokemon Index</a></h1> <br>
+
+    <!-- Pokemon Name -->
+
+    <h2> <%= poke.name %> </h2>
+
+    <!-- Pokemon type -->
+
+    <h3> <%= poke.type[0] %> </h3>
+    <h3> <%= poke.type[1] %> </h3>
+
+    <!-- Pokemon Id -->
+ 
+    <p> #<%= poke.id %> </p>
+
+     <!-- Pokemon Image -->
+
+     <img src="<%= poke.img %> " alt="">
+
+    <!-- Main Stats -->
+
+    <p>Stats: </p>
+
+    <p> hp:<%= poke.stats.hp %> </p>
+    <p> attack:<%= poke.stats.attack %> </p>
+    <p> defense:<%= poke.stats.defense %> </p>
+    <p> spattack:<%= poke.stats.spattack %> </p>
+    <p> spdefense:<%= poke.stats.spdefense %> </p>
+    <p> speed:<%= poke.stats.speed %> </p>
+
+</body>
+</html>

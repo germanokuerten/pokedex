@@ -51,7 +51,7 @@ app.get("/", (req, res) => {
 // Index route
 
 app.get("/pokemon", (req, res) => {
-    res.render("index.ejs", {pokeData: pokemon})
+    res.render("index.ejs", {allPoke: pokemon})
 })
 
 // New route
@@ -71,7 +71,7 @@ app.get("/pokemon/:id/edit", (req, res) => {
 // Show route
 
 app.get("/pokemon/:id", (req, res) => {
-    res.render("show.ejs", {index: pokemon[req.params.id]})
+    res.render("show.ejs", {poke: pokemon[req.params.id]})
 })
 
 

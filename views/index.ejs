@@ -22,7 +22,6 @@
             /* display: grid; */
             flex-flow: column wrap;
             /* justify-content: center */
-
         }
         h1 {
             text-align: center;
@@ -38,15 +37,15 @@
 
 
     <div>
-    <% for (let i = 0; i < pokeData.length; i++) { %> 
+    <% for (let i = 0; i < allPoke.length; i++) { %> 
         
-        <h2> <%= pokeData[i].name %> </h2>
+        <h2> <%= allPoke[i].name %> </h2>
         
-        <img src="<%= pokeData[i].img %>" alt=""> 
+       <a href="/pokemon/<%=i%> "><img src="<%= allPoke[i].img %>" alt=""></a>  
         
         <p>Type:</p>
-            <p><%= pokeData[i].type[0] %> </p>
-            <p><%= pokeData[i].type[1] %> </p> <br>
+            <p><%= allPoke[i].type[0] %> </p>
+            <p><%= allPoke[i].type[1] %> </p> <br>
         
     <% } %>
     
