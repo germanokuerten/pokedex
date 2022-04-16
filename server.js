@@ -80,6 +80,19 @@ app.get("/pokemon/:id/edit", (req, res) => {
     })
 })
 
+app.put("/pokemon/:id", (req, res) => {
+    // convert readyToEat to a Boolean
+    if (req.body.readyToEat === "on"){
+      req.body.readyToEat = true
+    } else {
+      req.body.readyToEat = false
+    }
+  
+    pokemon[req.params.id] = req.body
+  
+    res.redirect("/pokemon")
+  })
+
 // Show route
 
 app.get("/pokemon/:id", (req, res) => {

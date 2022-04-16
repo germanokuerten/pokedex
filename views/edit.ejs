@@ -23,14 +23,20 @@
     
     <a href="/pokemon/">Back to Pokedex</a> <br>
 
+    <h1>Edit Pokemon page</h1>
+
+    <form action="/pokemon/<%= index %>?_method=PUT" method="post">
+
     <!-- Pokemon Name -->
 
-    <h2> <%= poke.name %> </h2>
+    <!-- <h2><%= poke.name %> </h2> -->
+
+    <input type="text" name="name" value="<%= poke.name %>" /> <br><br>
 
     <!-- Pokemon type -->
 
-    <h3> <%= poke.type[0] %> </h3>
-    <h3> <%= poke.type[1] %> </h3>
+    <input type="text" name="name" value="<%= poke.type[0] %>" /> <br>
+    <input type="text" name="name" value="<%= poke.type[1] %>" /> <br>
 
     <!-- Pokemon Id -->
  
@@ -39,25 +45,32 @@
      <!-- Pokemon Image -->
 
      <img src="<%= poke.img %> " alt=""> <br><br>
+     <input type="text" name="name" value="<%= poke.img %>"/> <br>
 
     <!-- Main Stats -->
 
     <h4>Stats: </h4> 
 
-    <p>hp:&nbsp<%= poke.stats.hp %> </p>
-    <p>attack:&nbsp<%= poke.stats.attack %> </p>
-    <p>defense:&nbsp<%= poke.stats.defense %> </p>
-    <p>spattack:&nbsp<%= poke.stats.spattack %> </p>
-    <p>spdefense:&nbsp<%= poke.stats.spdefense %> </p>
-    <p>speed:&nbsp<%= poke.stats.speed %> </p>
+    <p>hp:&nbsp<input type="text" name="name" value="<%= poke.stats.hp %>"/></p> 
 
-<div>
-    <h1>Edit <%= poke.name %>  page</h1>
-    <form action="/pokemon/<%= index %>?_method=PUT" method="post">
-        name: <input type="text" name="name" value="<%= poke.name %>" /> <br/>
+    <p>attack:&nbsp<input type="text" name="name" value="<%= poke.stats.attack %>"/></p>
+    
+    <p>defense:&nbsp<input type="text" name="name" value="<%= poke.stats.defense %>"/></p>
+
+    <p>spattack:&nbsp<input type="text" name="name" value="<%= poke.stats.spattack %>"/></p>
+
+    <p>spdefense:&nbsp<input type="text" name="name" value="<%= poke.stats.spdefense %>"/></p>
+  
+    <p>speed:&nbsp<input type="text" name="name" value="<%= poke.stats.speed %>"/></p>
+    
+    
+
+       <p>Ready to update? <input type="checkbox" name="readyToEat" <%= poke.readyToEat ? "checked" : null %>/></p> 
+
+                <!-- turnary operator ? : (if statement alternative)-->
+
         <input type="submit" value="Update <%= poke.name %>">
     </form>
-</div>
 
 </body>
 </html>
