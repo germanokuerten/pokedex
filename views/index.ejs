@@ -11,9 +11,46 @@
     <!-- Body below-->
 
 <body>
+    <style>
+    
+        img {
+            max-width: 150px;
+            text-align: center;
+        }
+        div {
+            text-align: center;
+            /* display: grid; */
+            flex-flow: column wrap;
+            /* justify-content: center */
 
-    <h1>Pokedex</h1>
+        }
+        h1 {
+            text-align: center;
+        }
+    
+    </style>
 
+    <h1>Pokedex</h1> <br>
+
+    <nav>
+
+    </nav>
+
+
+    <div>
+    <% for (let i = 0; i < pokeData.length; i++) { %> 
+        
+        <h2> <%= pokeData[i].name %> </h2>
+        
+        <img src="<%= pokeData[i].img %>" alt=""> 
+        
+        <p>Type:</p>
+            <p><%= pokeData[i].type[0] %> </p>
+            <p><%= pokeData[i].type[1] %> </p> <br>
+        
+    <% } %>
+    
+    </div>
 
 
 </body>
