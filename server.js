@@ -60,7 +60,7 @@ app.get("/pokemon/new", (req, res) => {
     res.render("new.ejs")
 })
 
-// Delete - Note: Look up fruits app
+// Delete route
 
 app.delete("/pokemon/:id", (req, res) => {
     // grab the index from params
@@ -71,7 +71,7 @@ app.delete("/pokemon/:id", (req, res) => {
     res.redirect('/pokemon')
   })
 
-// Edit / Update route
+// Edit / Update route  // BUGGY!!!!!
 
 app.get("/pokemon/:id/edit", (req, res) => {
     res.render("edit.ejs", {
