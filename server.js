@@ -32,7 +32,7 @@ app.use(express.json())
 app.use(morgan("tiny"))
 
 // Static
-app.use("/static", express.static("public"))
+app.use(express.static("public"))
 
 // MethodOverride Dep
 app.use(methodOverride("_method"))
