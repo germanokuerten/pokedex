@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+    
+        body {
+            text-align: center;
+        }
+    
+    </style>
+
+    <body><br>
+        <a href="/pokemon/">Back to Pokedex</a> <br><br>
+    
+        <div class="container">
+            <h1>Add new Pokemon</h1>
+            <form action="/pokemon" method="post">
+                <input type="text" name="name" placeholder="Pokemon Name" /> <br><br>
+                <input type="text" name="type[]" placeholder="Type" /> <br><br>
+                <input type="text" name="id" placeholder="Id" /> <br><br>
+                <input type="url" name="img" placeholder="Pokemon Image" /> <br><br>
+
+                <h4>Stats: </h4>
+
+                <input type="text" name="stats[hp]" placeholder="hp"/> <br><br>
+                <input type="text" name="stats[attack]" placeholder="attack"/> <br><br>
+                <input type="text" name="stats[defense]" placeholder="defense"/> <br><br>
+                <input type="text" name="stats[spattack]" placeholder="spattack"/> <br><br>
+                <input type="text" name="stats[spdefense]" placeholder="spdefense"/> <br><br>
+                <input type="text" name="stats[speed]" placeholder="speed"/> <br><br>
+        
+                <br/><br>
+                <input type="submit" value="Create Pokemon">
+            </form>
+            </div>
+        
+    </body>
+
+</body>
+</html>

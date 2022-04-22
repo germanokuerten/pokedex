@@ -60,6 +60,12 @@ app.get("/pokemon/new", (req, res) => {
     res.render("new.ejs")
 })
 
+app.post("/pokemon", (req, res) => {
+    req.body = req.body
+    pokemon.push(req.body)
+    res.redirect("/pokemon")
+})
+
 // Delete route
 
 app.delete("/pokemon/:id", (req, res) => {

@@ -32,15 +32,17 @@
         h1 {
             text-align: center;
         }
+        nav {
+            text-align: center;
+        }
     
     </style>
 
     <h1>Pokedex</h1> <br>
 
-    <nav>
-
-    </nav>
-
+        <nav>
+            <a class="button" href="/pokemon/new">New Pokemon</a> 
+        </nav><br>
 
     <div>
     <% for (let i = 0; i < allPoke.length; i++) { %> 
@@ -60,7 +62,5 @@
     <% } %>
     
     </div>
-
-
 </body>
 </html>
